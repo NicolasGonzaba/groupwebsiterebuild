@@ -9,6 +9,7 @@ import Otoro from "@/public/assets/OtoroTruffle.png"
 import { Button } from "flowbite-react";
 import HomeCard from "./Components/HomeCard";
 import HomeCard2 from "./Components/HomeCard2";
+import WebFooter from "./Components/WebFooter";
 
 export default function Home() {
   return (
@@ -77,6 +78,7 @@ export default function Home() {
             <Button className='rounded-none m-5 text-1xl h-15 w-60 text-black' color="yellow" >BOOK YOUR TABLE</Button>
         </div>
       </main>
+      <WebFooter></WebFooter>
     </div>
   );
 }
