@@ -1,26 +1,28 @@
+import { Noto_Serif } from 'next/font/google';
 import React from 'react'
+
+const notoSerif = Noto_Serif({ subsets: [ "latin" ], style: [ "normal", "italic" ] });
 
 const WebFooter = () => {
     return (
-        <main className='flex flex-row justify-between text-gray-600 w-full p-10'>
+        <div className='flex flex-row justify-between text-gray-600 w-full p-10'>
 
             <div>
-                <h1 className='text-yellow-300 text-2xl mb-2'>Culinary Shadow</h1>
-                <p className='mb-2'>Tokyo | New York | Paris</p>
-                <p>contact@culinaryshadow.com</p>
+                <h1 className={`${notoSerif.className} text-ylw text-2xl mb-8`}>Culinary Shadow</h1>
+                <p className="mb-4 text-sm tracking-[1.4px]">TOKYO | NEW YORK | PARIS</p>
+                <p className="text-sm tracking-[1.4px]">CONTACT@CULINARYSHADOW.COM</p>
             </div>
-            <div>
-                <p>Privacy Policy</p>
-                <p>Terms of Service</p>
-                <p>Career</p>
-                <p>Press Kit</p>
+            <div className='flex flex-col gap-4 text-sm tracking-[1.4px]'>
+                <p>PRIVACY POLICY</p>
+                <p>TERMS OF SERVICE</p>
+                <p>CAREER</p>
+                <p>PRESS KIT</p>
             </div>
 
-            <div className='flex items-end text-end'>
-                <h3>© 2024 Culinary Shadow. All Rights<p>
-                    Reserved.</p></h3>
+            <div className='flex items-end text-end text-sm tracking-[1.4px]'>
+                <h3>© 2024 CULINARY SHADOW. ALL RIGHTS RESERVED.</h3>
             </div>
-        </main>
+        </div>
     )
 }
 
